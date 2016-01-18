@@ -1,5 +1,5 @@
-# [TeleSeed](https://telegram.me/TeleSeed) 
-**An advance and powerful Administration bot based on [yagop/telegram-bot](https://github.com/yagop/telegram-bot) licensed under [GNU General public License](https://github.com/SEEDTEAM/TeleSeed/blob/master/LICENSE)**
+# [Creed BoT](https://telegram.me/creedsteam) 
+**An Edited Bot Based On [Tele seed](http://github.com/SeedTeam/teleseed) Plugins and Added new and Usefull Plugins to it 
 # Features
 
 * **A powerful Anti spam with custom sensitivity For each group**
@@ -18,9 +18,6 @@
 * **And ...**
 
 **Table of Contents** 
-- [TeleSeed](#teleseed)
-- [Features](#features)
-- [Commands](#commands)
 	- [Admins commands](#admins-commands)
 		- [Realm creation](#realm-creation)
 		- [Group creation](#group-creation)
@@ -72,7 +69,8 @@
 		- [lock groups member|name](#lock-groups-membername)
 			- [unlock groups member|name](#unlock-groups-membername)
 		- [Group link](#group-link)
-		- [change name|rules|name](#change-namerulesname)
+	        - [Group link Pv](#group-link-pv)
+	        - [change name|rules|name](#change-namerulesname)
 		- [Group log](#group-log)
 		- [Join](#join)
 - [Installation](#installation)
@@ -89,7 +87,7 @@
 ### Group creation
 >[!/]creategroup [group name]
 >
->>[!/]creategroup SEED
+>>[!/]creategroup Creed
 >>>will create a group
 >>>
 >>>_Only works in realms for admins but, sudo users can use it everywhere_
@@ -97,7 +95,7 @@
 ### Realm creation
 >[!/]createrealm [realm name]
 >
->>[!/]createrealm SEED
+>>[!/]createrealm Creeds
 >>>will create a realm
 >>>
 >>>_Only works in realms for admins but, sudo users can use it everywhere_
@@ -137,7 +135,7 @@
 
 ### Setting group name in realm 
 > [!/]setname [Group_id] [text]
->>[!/]setname 123456789 SEED
+>>[!/]setname 123456789 Creed
 >>>This command will set [text] as name of [Group_id]
 
 ### Setting rules in realm
@@ -146,16 +144,16 @@
 >>>This command will set [text] as rules of [Group_id]
 
 
-### Lock groups name|flood|photo|member in realm
-> [!/]lock [Group_id] [name|flood|photo|member]
+### Lock groups name|flood|photo|member|join|fosh|english|link in realm
+> [!/]lock [Group_id] [name|flood|photo|member|join|fosh|english|link]
 >>[!/]lock 123456789 name
->>>This command will lock name|flood|photo|member of [Group_id]
+>>>This command will lock name|flood|photo|member|join|fosh|english|link of [Group_id]
 
 
-### Unlock groups name|flood|photo|member
-> [!/]Unlock [Group_id] [name|flood|photo|member]
+### Unlock groups name|flood|photo|member|join|fosh|english|link
+> [!/]Unlock [Group_id] [name|flood|photo|member|join|fosh|english|link]
 >>[!/]Unlock 123456789 name
->>>This command will unlock name|flood|photo|member of [Group_id]
+>>>This command will unlock name|flood|photo|member|join|fosh|english|link of [Group_id]
 
 ## Group setting in realm
 >[!/]setting [Group_id]
@@ -216,7 +214,7 @@
 >>>This command will set [User_id] as the owner of [group_id]
 
 ### Bot stats 
->[!/]stats teleseed
+>[!/]stats creedbot
 >>This command will return bot stats
 
 # Realm Help
@@ -284,7 +282,7 @@ _Sudo users and admins can also use this commands in all groups_
 
 ### Changing Group name
 >[!/]setname [name]
->>[!/]setname SEED
+>>[!/]setname Creed
 >>>This command will set [name] as name of groups
 
 ### Group link
@@ -406,7 +404,7 @@ _Sudo users and admins can also use this commands in all groups_
 
 ### change name|rules|name
 >[!/]changename [group_id] [name]
->>[!/]changename 123456789 SEED
+>>[!/]changename 123456789 Creed
 >
 >[!/]changrules [group_id] [rules]
 >>[!/]changrules 123456789 rules !
@@ -435,8 +433,8 @@ sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-d
 ```bash
 # lets install the bot
 cd $HOME
-git clone https://github.com/SEEDTEAM/TeleSeed.git
-cd TeleSeed
+git clone https://github.com/Creedsteam/creed.git
+cd creed
 chmod +x launch.sh
 ./launch.sh install
 ./launch.sh # Enter a phone number & confirmation code.
@@ -445,7 +443,7 @@ chmod +x launch.sh
 To install everything in one command on debian-based distros, use: (useful for VPS deployment)
 ```sh
 #https://github.com/yagop/telegram-bot/wiki/Installation
-sudo apt-get update; sudo apt-get upgrade -y --force-yes; sudo apt-get dist-upgrade -y --force-yes; sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev libjansson* libpython-dev make unzip git redis-server g++ -y --force-yes && git clone https://github.com/SEEDTEAM/TeleSeed.git && cd TeleSeed && chmod +x launch.sh && ./launch.sh install && ./launch.sh
+sudo apt-get update; sudo apt-get upgrade -y --force-yes; sudo apt-get dist-upgrade -y --force-yes; sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev libjansson* libpython-dev make unzip git redis-server g++ -y --force-yes && git clone https://github.com/creedsteam/creed.git && cd creed && chmod +x launch.sh && ./launch.sh install && ./launch.sh
 ```
 ### Realm configuration 
 
@@ -473,31 +471,22 @@ Create a realm using !createrealm command
 # Support and development
 
 Do not contact **us** In private for support.
-Join our bot development group by sending `/join 56670147` to [@TeleSeed](https://telegram.me/TeleSeed)
+Join our bot development group by sending `/join 76950056` to [@Creed_antispam](https://telegram.me/creedantispam_channel)
 
 _If you are using /join service for first time you have to send it 11 times ( Bot is spam reported )_
 
 # Special thanks to
-[@seyedan25](https://telegram.me/seyedan25)
+[@Creed_is_dead](https://telegram.me/Creed_is_dead)
 
-For Managing [@teleseed](https://telegram.me/TeleSeed) on Telegram
+For Managing [@Creed_antispam](https://telegram.me/Creed_antispam) on Telegram
 
-[@Vamptacus](https://telegram.me/Vamptacus)
+[@Aria_Creed](https://telegram.me/Aria_Creed)
+
+[@Amircc_Creed](https://telegram.me/Amircc_Creed)
+
+[@ArashInfernal](https://telegram.me/ArashInfernal)
 
 For graphic designs
 
-[@topkecleon](https://github.com/topkecleon)
-
-[@JuanPotato](https://github.com/JuanPotato)
-
-# Our team!
-
-[Alphonse](https://github.com/hmon) ([Telegram](https://telegram.me/iwals))
-
-[I M /-\ N](https://github.com/imandaneshi) ([Telegram](https://telegram.me/imandaneshi))
-
-[Siyanew](https://github.com/Siyanew) ([Telegram](https://telegram.me/Siyanew))
-
-[Rondoozle](https://github.com/Rondoozle) ([Telegram](https://telegram.me/Rondoozle))
-
-Our Telegram cahnnels > English: [@TeleSeedCH](https://telegram.me/teleseedch) Persian: [@IranSeed](https://telegram.me/iranseed)
+[@Jacki_Pendelton](https://telegram.me/Jacki_Pendelton)
+Our Telegram cahnnels > Persian : [@Creedantispam_Channel](https://telegram.me/creedantispam_Channel)
