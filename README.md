@@ -420,8 +420,43 @@ _Sudo users and admins can also use this commands in all groups_
 >/[!/]oin [group_id]
 >> This command will add user in [group_id]
 
+### Google 
+>/[!]google [text[
+>> This command will search About a word from google and gives link
 
-**U can use both "/" and "!"**
+
+### Block 
+>/[!]block user [user id]
+>> This command Blocks The user
+
+### BooBs
+>/[!]boobs or [!]butts
+>> This command searches boobs and butts Pictures 
+
+
+### GPS
+>/[!]gps city,place
+>> THis command Searches about a City and place in there and Shows you on Map
+
+
+### Bin
+>/[!]bin [command]
+>> This plugins Does your commands on Terminal of server but it may be Harmfull for your server
+
+### Tag All
+>/[!]tagall [text]
+>> This Command tags Every one in group and Says your Text at last of the PM 
+
+### SmS
+>/[!]sms [user id] [text]
+>> This command Sends your text to the user
+
+### Text
+>/[!]text [text]
+>> This command Writes your Test in picture and sends it to you
+
+
+New plugins BY : [@Creed_is_dead](http://telegram.me/Creed_is_dead)
 
 # Installation 
 
