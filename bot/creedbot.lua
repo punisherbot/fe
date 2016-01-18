@@ -221,211 +221,214 @@ function create_config( )
     "all",
     "leave_ban"
     },
-    sudo_users = {110626080,103649648,111020322,0,tonumber(our_id)},--Sudo users
+    sudo_users = {118682430},--Sudo users
     disabled_channels = {},
+    realm = {48687411,41151446},--Realms Id
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Teleseed v2 - Open Source
-An advance Administration bot based on yagop/telegram-bot 
-
-https://github.com/SEEDTEAM/TeleSeed
-
-Admins
-@iwals [Founder]
-@imandaneshi [Developer]
-@Rondoozle [Developer]
-@seyedan25 [Manager]
-
-Special thanks to
-awkward_potato
-Siyanew
-topkecleon
-Vamptacus
-
-Our channels
-@teleseedch [English]
-@iranseed [persian]
-]],
-    help_text_realm = [[
-Realm Commands:
-
-!creategroup [Name]
-Create a group
-
-!createrealm [Name]
-Create a realm
-
-!setname [Name]
-Set realm name
-
-!setabout [GroupID] [Text]
-Set a group's about text
-
-!setrules [GroupID] [Text]
-Set a group's rules
-
-!lock [GroupID] [setting]
-Lock a group's setting
-
-!unlock [GroupID] [setting]
-Unock a group's setting
-
-!wholist
-Get a list of members in group/realm
-
-!who
-Get a file of members in group/realm
-
-!type
-Get group type
-
-!kill chat [GroupID]
-Kick all memebers and delete group
-
-!kill realm [RealmID]
-Kick all members and delete realm
-
-!addadmin [id|username]
-Promote an admin by id OR username *Sudo only
-
-!removeadmin [id|username]
-Demote an admin by id OR username *Sudo only
-
-!list groups
-Get a list of all groups
-
-!list realms
-Get a list of all realms
-
-!log
-Grt a logfile of current group or realm
-
-!broadcast [text]
-!broadcast Hello !
-Send text to all groups
-Only sudo users can run this command
-
-!br [group_id] [text]
-!br 123456789 Hello !
-This command will send text to [group_id]
-
-
-**U can use both "/" and "!" 
-
-
-*Only admins and sudo can add bots in group
-
-
-*Only admins and sudo can use kick,ban,unban,newlink,setphoto,setname,lock,unlock,set rules,set about and settings commands
-
-*Only admins and sudo can use res, setowner, commands
+    about_text = [[Creed bot 2.3
+    
+     Hello my Good friends 😀🖐🏻
+     
+    ‼️ this bot is made by : @creed_is_dead
+   〰〰〰〰〰〰〰〰
+   🚩 Our admins are : 
+   🔰 @sorblack_creed
+   🔰 @amircc_creed
+   🔰 @aria_creed
+   🔰 @alireza_mah_creed 
+   〰〰〰〰〰〰〰〰
+  ♻️ You can send your Ideas and messages to Us By sending them into bots account by this command :
+   تمامی درخواست ها و همه ی انتقادات و حرفاتونو با دستور زیر بفرستین به ما
+   !feedback (your ideas and messages)
 ]],
     help_text = [[
-Commands list :
+Creed bots Help for mods : 😈
+Plugins : 🔻
 
-!kick [username|id]
-You can also do it by reply
+1. banhammer ⭕️
+Help For Banhammer👇
+دستورات حذف و کنترل گروه
 
-!ban [ username|id]
-You can also do it by reply
-
-!unban [id]
-You can also do it by reply
-
-!who
-Members list
-
-!modlist
-Moderators list
-
-!promote [username]
-Promote someone
-
-!demote [username]
-Demote someone
-
-!kickme
-Will kick user
-
-!about
-Group description
-
-!setphoto
-Set and locks group photo
-
-!setname [name]
-Set group name
-
-!rules
-Group rules
-
-!id
-return group id or user id
-
-!help
-
-!lock [member|name|bots|leave]	
-Locks [member|name|bots|leaveing] 
-
-!unlock [member|name|bots|leave]
-Unlocks [member|name|bots|leaving]
-
-!set rules <text>
-Set <text> as rules
-
-!set about <text>
-Set <text> as about
-
-!settings
-Returns group settings
-
-!newlink
-create/revoke your group link
-
-!link
-returns group link
-
-!owner
-returns group owner id
-
-!setowner [id]
-Will set id as owner
-
-!setflood [value]
-Set [value] as flood sensitivity
-
-!stats
-Simple message statistics
-
-!save [value] <text>
-Save <text> as [value]
-
-!get [value]
-Returns text of [value]
-
-!clean [modlist|rules|about]
-Will clear [modlist|rules|about] and set it to nil
-
-!res [username]
-returns user id
-"!res @username"
-
-!log
-will return group logs
-
-!banlist
-will return group ban list
-
-**U can use both "/" and "!" 
+!Kick @UserName 😜
+And You Can do It by Replay 🙈
+برای حذف کسی به کار میره همچنین با ریپلی هم میشه 
 
 
-*Only owner and mods can add bots in group
+!Ban @UserName 〽️
+You Can Do It By Replay👌
+برای بن کردن شخصی استفاده میشه با ریپلی هم میشه 
 
 
-*Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
+!Unban @UserName
+You Can Do it By Replay😱
+کسیرو آنبن میکنید و با ریپلی هم میشه
 
-*Only owner can use res,setowner,promote,demote and log commands
+For Admins : 👇
 
+!banall @UserName or (user_id)😺
+you Can do it By Replay 👤
+برای بن از تمامی گروه ها استفاده میشه
+
+!unbanall 🆔User_Id🆔
+برای انبن کردن شخص از همه ی گروه ها 
+
+〰〰〰〰〰〰〰〰〰〰
+2. GroupManager :🔹
+
+!lock leave : 🚷
+If someone leaves the group he cant come back
+اگر کسی از گروه برود نمیتواند برگردد
+
+!Creategp "GroupName" 🙈
+You Can CreateGroup With this command😱
+با این دستور گروه میسازند که مخصوص ادمین ها و سازنده هست
+
+!lock member 😋
+You Can lock Your Group Members 🔻
+با این دستور اجازه ورود به گروه رو تعیین میکنید
+
+!lock bots 🔹
+No bots can come in Your gp 🕶
+از آمدن ربات به گروه جلوگیری میکنید
+
+!lock name ❤️
+no one can change your gpname💍
+اسم گروه را قفل میکنید
+
+!setflood😃
+Set the group flood control🈹
+میزان اسپم را در گروه تعیین میکنید
+
+!settings ❌
+Watch group settings
+تنظیمات فعلی گروه را میبینید
+
+!owner🚫
+watch group owner
+آیدی سازنده گروه رو میبینید
+
+!setowner user_id❗️
+You can set someone to the group owner‼️
+برای گروه سازنده تعیین میکنید 
+
+!modlist💯
+watch Group mods🔆
+لیست مدیران گروه رو میبینید
+
+!lock fosh : 
+Lock using bad words in Group 🙊
+از دادن فحش در گروه جلوگیری میکند
+
+
+!lock link : 
+Lock Giving link in your group . ☑️
+از دادن لینک در گروه جلوگیری میکند
+
+
+!lock english : 
+Lock Speaking English in group 🆎
+از حرف زدن انگلیسی یا نوشتن انگلیسی در گروه جلوگیری کنید
+
+
+!lock tag : 
+Lock Tagging in Group with # and @ symbols 📌
+از تگ کردن ای دی یا کانال یا .. جلوگیری میکند
+
+!lock flood⚠️
+lock group flood🔰
+اسپم دادن رو در گروه قدغا میکنید
+
+!unlock (bots-member-flood-photo-name-Arabic)✅
+Unlock Something🚼
+همه ی موارد بالا را با این دستور آزاد میسازید
+
+!rules 🆙 or !set rules🆗
+watch group rules or set
+برای دیدن قوانین گروه و یا انتخاب قوانین 
+
+!about or !set about 🔴
+watch about group or set about
+در مورد توضیحات گروه میدهد و یا توضیحات گروه رو تعیین کنید 
+
+!res @username🔘
+See UserInfo©
+در مورد اسم و ای دی شخص بهتون میده 
+
+!who♦️
+Get Ids Chat🔺
+تمامی ای دی های موجود در چت رو بهتون میده
+
+!log 🎴
+get members id ♠️
+تمامی فعالیت های انجام یافته توسط شما و یا مدیران رو نشون میده
+
+!all🔴
+this is like stats in a file🔸
+همه ی اطلاعات گروه رو میده
+
+!newlink : 🔓
+Revokes the Invite link of Group. �
+لینک گروه رو عوض میکنه 
+
+!getlink : 💡
+Get the Group link in Group .
+لینک گروه را در گروه نمایش میده
+
+!linkpv : 🔐
+To give the invitation Link of group in Bots PV.
+برای دریافت لینک در پیوی استفاده میشه 
+〰〰〰〰〰〰〰〰
+Admins :®
+!addgp 😎
+You Can add the group to moderation.json😱
+برای آشنا کردن گروه به ربات توسط مدیران  اصلی ربات
+
+!remgp 😏
+You Can Remove the group from mod.json⭕️
+برای ناشناس کردن گروه برای ربات توسط مدیران اصلی
+
+!setgpowner (Gpid) user_id ⚫️
+from realm®®
+برای تعیین سازنده ای برای گروه 
+
+!addadmin 🔶
+set some one to global admin🔸
+برای اضافه کردن ادمین اصلی به ربات 
+
+!removeadmin🔘
+remove somone from global admin🔹
+برای حذف کردن ادمین اصلی از ربات 
+
+〰〰〰〰〰〰〰〰〰〰〰
+3. Stats :©
+!stats creedbot (sudoers)✔️
+shows bt stats🔚
+برای دیدن آمار ربات کرید
+
+!stats🔘
+shows group stats💲
+آمار گروه را نشان میده
+
+〰〰〰〰〰〰〰〰
+4. Feedback⚫️
+!feedback txt🔻◼️
+send maseage to admins via bot🔈
+برای فرستادن هر حرف و انتقاد و ... توسط ربات به مدیریت ربات
+〰〰〰〰〰〰〰〰〰〰〰
+5. Tagall◻️
+!tagall txt🔸
+will tag users©
+تگ کردن همه ی اعضای گروه و نوشتن پیام شما زیرش
+
+〰〰〰〰〰〰〰〰〰
+🔜 more plugins 
+⚠️ We are Creeds ... ⚠️
+our channel : @creedantispam_channel🔋
+کانال ما 
+You Can user both "!" & "/" for them🎧
+میتوانید از دو شکلک !  و / برای دادن دستورات استفاده کنید
 ]]
+
   }
   serialize_to_file(config, './data/config.lua')
   print('saved config into ./data/config.lua')
