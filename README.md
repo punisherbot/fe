@@ -437,13 +437,31 @@ git clone https://github.com/Creedsteam/creed.git
 cd creed
 chmod +x launch.sh
 ./launch.sh install
+go to creed/tg/tgl/structures.c and in line 983 there is 4 Blue sentences Remove them and put this phrase in the place of those Blues : case CODE_message_media_unsupported:
+M->type = tgl_message_media_unsupported;
+break;
+then come back to the TG file and type : Make
 ./launch.sh # Enter a phone number & confirmation code.
 ```
 ### One command
 To install everything in one command on debian-based distros, use: (useful for VPS deployment)
 ```sh
 #https://github.com/yagop/telegram-bot/wiki/Installation
-sudo apt-get update; sudo apt-get upgrade -y --force-yes; sudo apt-get dist-upgrade -y --force-yes; sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev libjansson* libpython-dev make unzip git redis-server g++ -y --force-yes && git clone https://github.com/creedsteam/creed.git && cd creed && chmod +x launch.sh && ./launch.sh install && ./launch.sh
+
+sudo apt-get update; sudo apt-get upgrade -y --force-yes; sudo apt-get dist-upgrade -y --force-yes; sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev libjansson* libpython-dev make unzip git redis-server g++ -y --force-yes && git clone https://github.com/creedsteam/creed.git && cd creed && chmod +x launch.sh && ./launch.sh install && cd $home $$ cd creed & cd tg && cd tgl  && nano structures.c
+
+then you have to go to the line 983 there is 4 Blue Line you have to delete them and Put this Sentence in there  : 
+
+case CODE_message_media_unsupported:
+M->type = tgl_message_media_unsupported;
+break;
+
+then press Ctrl + X and press Y then press ENTER to save the file .
+
+then use this commands in terminal Again : 
+
+cd $home && cd creed && cd tg && make && cd $home && cd creed && ./launch.sh
+
 ```
 ### Realm configuration 
 
