@@ -204,7 +204,7 @@ local function show_group_settingsmod(msg, data, target)
     	leave_ban = data[tostring(msg.to.id)]['settings']['leave_ban']
    	end
   local settings = data[tostring(target)]['settings']
-  local text = "Group settings:\nLock group Fosh : "..settings.antifosh.."\nLock group English : "..settings.lock_egnlish.."\nLock group Tag : "..settings.antitag.."\nLock group leave : "..settings.lock_leave.."\nLock group name : "..settings.lock_name.."\nLock group photo : "..settings.lock_photo.."\nLock group member : "..settings.lock_member.."\nLock group leave : "..leave_ban.."\nflood sensitivity : "..NUM_MSG_MAX.."\nBot protection : "..bots_protection--"\nPublic: "..public
+  local text = "Group settings:\nLock group Join link : "..settings.antijoin.."\nLock group Fosh : "..settings.antifosh.."\nLock group English : "..settings.lock_egnlish.."\nLock group Tag : "..settings.antitag.."\nLock group leave : "..settings.lock_leave.."\nLock group name : "..settings.lock_name.."\nLock group photo : "..settings.lock_photo.."\nLock group member : "..settings.lock_member.."\nLock group leave : "..leave_ban.."\nflood sensitivity : "..NUM_MSG_MAX.."\nBot protection : "..bots_protection--"\nPublic: "..public
   return text
 end
 
@@ -364,6 +364,28 @@ local function unlock_group_membermod(msg, data, target)
     data[tostring(target)]['settings']['lock_member'] = 'no'
     save_data(_config.moderation.data, data)
     return 'Group members has been unlocked'
+  end
+end
+local group_join_lock = data[tostring(target)]['settings']['antijoin']
+  if group_join_lock == 'yes' then
+    return 'Join by link is already locked'
+  else
+    data[tostring(target)]['settings']['antijoin'] = 'yes'
+    save_data(_config.moderation.data, data)
+    return 'Join by link has been locked'
+  end
+end
+  local function unlock_group_join(msg, data, target)
+  if not is_momod(msg) then
+    return "For moderators only!"
+end
+  local group_join_lock = data[tostring(target)]['settings']['antijoin']
+  if group_join_lock == 'no' then
+    return 'Join by link is already unlocked'
+ else
+    data[tostring(target)]['settings']['antijoin'] = 'no'
+     save_data(_config.moderation.data, data)
+  return 'Join by link has been unlocked'
   end
 end
 local group_link_lock = data[tostring(target)]['settings']['antilink']
@@ -1116,6 +1138,10 @@ local function run(msg, matches)
        savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked leaving ")
        return lock_group_leave(msg, data, target)
      end
+    if matches[2] == 'join' then
+       savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked Joining by link ")
+       return lock_group_join(msg, data, target)
+     end
    end
     if matches[1] == 'unlock' then 
       local target = msg.to.id
@@ -1162,6 +1188,10 @@ local function run(msg, matches)
     if matches[2] == 'leave' then
        savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked leaving ")
        return unlock_group_leave(msg, data, target)
+     end
+     if matches[2] == 'join' then
+       savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked Joining by link ")
+       return unlock_group_join(msg, data, target)
      end
    end
     if matches[1] == 'settings' then
