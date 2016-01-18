@@ -366,7 +366,110 @@ local function unlock_group_membermod(msg, data, target)
     return 'Group members has been unlocked'
   end
 end
-
+local group_link_lock = data[tostring(target)]['settings']['antilink']
+  if group_link_lock == 'yes' then
+    return 'Link is already locked'
+  else
+    data[tostring(target)]['settings']['antilink'] = 'yes'
+    save_data(_config.moderation.data, data)
+    return 'Link has been locked'
+  end
+end
+  local function unlock_group_link(msg, data, target)
+  if not is_momod(msg) then
+    return "For moderators only!"
+end
+  local group_link_lock = data[tostring(target)]['settings']['antilink']
+  if group_link_lock == 'no' then
+    return 'Link is already unlocked'
+ else
+    data[tostring(target)]['settings']['antilink'] = 'no'
+     save_data(_config.moderation.data, data)
+  return 'Link has been unlocked'
+  end
+end
+  local function lock_group_fosh(msg, data, target)
+  if not is_momod(msg) then
+    return "For moderators only!"
+  end
+  local group_fosh_lock = data[tostring(target)]['settings']['antifosh']
+  if group_fosh_lock == 'yes' then
+    return 'fosh is already locked'
+  else
+    data[tostring(target)]['settings']['antifosh'] = 'yes'
+    save_data(_config.moderation.data, data)
+    return 'fosh has been locked'
+  end
+end
+  local function unlock_group_fosh(msg, data, target)
+  if not is_momod(msg) then
+    return "For moderators only!"
+end
+  local group_fosh_lock = data[tostring(target)]['settings']['antifosh']
+  if group_fosh_lock == 'no' then
+    return 'fosh is already unlocked'
+ else
+    data[tostring(target)]['settings']['antifosh'] = 'no'
+     save_data(_config.moderation.data, data)
+  return 'fosh has been unlocked'
+  end
+end
+  local function lock_group_tag(msg, data, target)
+  if not is_momod(msg) then
+    return "For moderators only!"
+  end
+  local group_tag_lock = data[tostring(target)]['settings']['antitag']
+  if group_tag_lock == 'yes' then
+    return 'tag is already locked'
+  else
+    data[tostring(target)]['settings']['antitag'] = 'yes'
+    save_data(_config.moderation.data, data)
+    return 'tag has been locked'
+  end
+end
+  local function unlock_group_tag(msg, data, target)
+  if not is_momod(msg) then
+    return "For moderators only!"
+end
+  local group_tag_lock = data[tostring(target)]['settings']['antitag']
+  if group_tag_lock == 'no' then
+    return 'tag is already unlocked'
+ else
+    data[tostring(target)]['settings']['antitag'] = 'no'
+     save_data(_config.moderation.data, data)
+  return 'tag has been unlocked'
+  end
+end
+  local function lock_group_english(msg, data, target)
+  if not is_momod(msg) then
+    return "For moderators only!"
+  end
+  local group_english_lock = data[tostring(target)]['settings']['lock_english']
+  if group_english_lock == 'yes' then
+    return 'English is already locked'
+  else
+    data[tostring(target)]['settings']['lock_english'] = 'yes'
+    save_data(_config.moderation.data, data)
+    return 'English has been locked'
+  end
+end
+  local function unlock_group_english(msg, data, target)
+  if not is_momod(msg) then
+    return "For moderators only!"
+end
+  local group_english_lock = data[tostring(target)]['settings']['lock_english']
+  if group_english_lock == 'no' then
+    return 'english is already unlocked'
+ else
+    data[tostring(target)]['settings']['lock_english'] = 'no'
+     save_data(_config.moderation.data, data)
+  return 'English has been unlocked'
+  end
+end
+  local function lock_group_leave(msg, data, target)
+  if not is_momod(msg) then
+    return "For moderators only!"
+  end
 
 local function set_public_membermod(msg, data, target)
   if not is_momod(msg) then
@@ -977,6 +1080,18 @@ local function run(msg, matches)
         savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked name ")
         return lock_group_namemod(msg, data, target)
       end
+      if matches[2] == 'link' then
+        savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked link ")
+       return lock_group_link(msg, data, target)
+      end
+          if matches[2] == 'fosh' then
+        savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked fosh ")
+       return lock_group_fosh(msg, data, target)
+      end
+          if matches[2] == 'tag' then
+        savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked tag ")
+       return lock_group_tag(msg, data, target)
+      end
       if matches[2] == 'member' then
         savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked member ")
         return lock_group_membermod(msg, data, target)
@@ -988,6 +1103,10 @@ local function run(msg, matches)
       if matches[2] == 'arabic' then
         savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked arabic ")
         return lock_group_arabic(msg, data, target)
+      end
+          if matches[2] == 'english' then
+        savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked English ")
+        return lock_group_english(msg, data, target)
       end
       if matches[2] == 'bots' then
         savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked bots ")
@@ -1004,6 +1123,18 @@ local function run(msg, matches)
         savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked name ")
         return unlock_group_namemod(msg, data, target)
       end
+      if matches[2] == 'link' then
+        savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked link ")
+        return unlock_group_link(msg, data, target)
+      end
+          if matches[2] == 'fosh' then
+        savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked fosh ")
+        return unlock_group_fosh(msg, data, target)
+      end
+      if matches[2] == 'tag' then
+        savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked tag ")
+        return unlock_group_tag(msg, data, target)
+      end
       if matches[2] == 'member' then
         savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked member ")
         return unlock_group_membermod(msg, data, target)
@@ -1019,6 +1150,10 @@ local function run(msg, matches)
       if matches[2] == 'arabic' then
         savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked arabic ")
         return unlock_group_arabic(msg, data, target)
+      end
+          if matches[2] == 'english' then
+        savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked english ")
+        return unlock_group_english(msg, data, target)
       end
       if matches[2] == 'bots' then
         savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked bots ")
@@ -1270,5 +1405,3 @@ return {
   run = run
 }
 end
-
-
