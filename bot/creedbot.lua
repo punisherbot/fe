@@ -223,7 +223,7 @@ function create_config( )
     },
     sudo_users = {118682430},--Sudo users
     disabled_channels = {},
-    realm = {48687411,41151446},--Realms Id
+    realm = {},--Realms Id
     moderation = {data = 'data/moderation.json'},
     about_text = [[Creed bot 2.3
     
