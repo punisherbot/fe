@@ -239,28 +239,25 @@ function create_config( )
     "all",
     "leave_ban"
     },
-    sudo_users = {118682430},--Sudo users
+    sudo_users = {168398326},--Sudo users
     disabled_channels = {},
     realm = {},--Realms Id
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Creed bot 2.3
+    about_text = [[PUNISHER BOT 2.3
     
      Hello my Good friends 😀🖐🏻
      
-    ‼️ this bot is made by : @creed_is_dead
+    ‼️ this bot is made by : @punisher_erfan
    〰〰〰〰〰〰〰〰
-   🚩 Our admins are : 
-   🔰 @sorblack_creed
-   🔰 @amircc_creed
-   🔰 @aria_creed
-   🔰 @alireza_mah_creed 
+   🚩 Our admin are :
+   🔰 @PUNISHER_ERFAN
    〰〰〰〰〰〰〰〰
   ♻️ You can send your Ideas and messages to Us By sending them into bots account by this command :
    تمامی درخواست ها و همه ی انتقادات و حرفاتونو با دستور زیر بفرستین به ما
    !feedback (your ideas and messages)
 ]],
     help_text = [[
-Creed bots Help for mods : 😈
+Punisher bot Help for mods : 😈
 Plugins : 🔻
 
 1. banhammer ⭕️
@@ -419,7 +416,7 @@ remove somone from global admin🔹
 
 〰〰〰〰〰〰〰〰〰〰〰
 3. Stats :©
-!stats creedbot (sudoers)✔️
+!stats punisherbot (sudoers)✔️
 shows bt stats🔚
 برای دیدن آمار ربات کرید
 
@@ -440,8 +437,8 @@ will tag users©
 
 〰〰〰〰〰〰〰〰〰
 🔜 more plugins 
-⚠️ We are Creeds ... ⚠️
-our channel : @creedantispam_channel🔋
+⚠️ We are Punishers ... ⚠️
+our channel : @PUNISHER_TEAM🔋
 کانال ما 
 You Can user both "!" & "/" for them🎧
 میتوانید از دو شکلک !  و / برای دادن دستورات استفاده کنید
